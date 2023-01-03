@@ -1,0 +1,195 @@
+/* MAIN */
+* {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+    font-family: 'Harmattan', sans-serif;
+    font-family: 'Nunito', sans-serif;
+}
+::-webkit-scrollbar {
+    width: 0.5rem;
+}
+::-webkit-scrollbar-track {
+    background: #89cff0 ;
+}
+::-webkit-scrollbar-thumb {
+    background-color: #333333;
+    border-radius: 1rem;
+}
+body {
+    background: #89cff0;
+    margin-left: 8%;
+    margin-right: 8%;
+}
+hr {
+    height: 10px;
+    background: #000000;
+    border: none;
+    border-radius: 10px;
+}
+.end {
+    border-radius: 0;
+    height: 200px;
+    clip-path: polygon(50% 100%, 0 0, 100% 0);
+}
+.header {
+    text-align: center;
+    font-size: 3.5rem;
+    color: yellow;
+}
+iframe {
+    width: 80%;
+    height: 70vh;
+    margin-right: 10%;
+    margin-top: 10px;
+    border-radius: 20px;
+}
+.h1 {
+    text-align: center;
+    font-size: 60px;
+    padding: 20px;
+}
+li {
+    line-height: 40px;
+    font-size: 18px;
+    font-weight: 400;
+}
+.small {
+    display: none;
+}
+/* END MAIN */
+/* HEADER */
+.big {
+    background: #89cff0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    width: 84%;
+    border: none;
+}
+.big nav ul {
+    display: flex;
+}
+.big nav ul li a {
+    padding: 0px 0px 0px 20px;
+    color: #000000;
+    font-size: 20px;
+    transition: 0.7s ease;
+}
+.big .icon {
+    color: #000000;
+    font-size: 40px;
+    transition: 0.7s ease;
+}
+.big nav ul li a:hover,.big .icon:hover {
+    color: yellow;
+}
+/* END HEADER */ 
+/* A */
+.a {
+    padding-top: 80px;
+}
+/*END A*/
+
+@media (max-width:600px) {
+    .big {
+        display:NONE ;
+    }
+    /* SMALL */
+    .small {
+        background: #89cff0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: fixed;
+        width: 84%;
+        border: none;
+    }
+    .small input {
+        display: none;
+    }
+    .small nav {
+        display: none;
+    }
+    .small input:checked + nav {
+        display: block;
+    }
+    .small nav ul {
+        position: absolute;
+        left: 55%;
+        top: 40px;
+        text-align: center;
+        background: #00aeff;
+        box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+        border-radius: 20px;
+        text-align: center;
+    }
+    .small nav ul li a {
+        padding: 0px 0px 0px 20px;
+        color: #000000;
+        font-size: 20px;
+        transition: 0.7s ease;
+    }
+    .small .icon {
+        color: #000000;
+        font-size: 40px;
+        transition: 0.7s ease;
+    }
+    .small nav ul li a:hover,.small .icon:hover {
+        color: yellow;
+    }
+}
+@media (max-width:400px) {
+    iframe {
+        height: 30vh;
+        width: 100%;
+        margin-right: 0;
+    }
+}
+#loader {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    z-index: 1;
+    width: 120px;
+    height: 120px;
+    margin: -76px 0 0 -76px;
+    border: 16px solid #f3f3f3;
+    border-radius: 50%;
+    border-top: 16px solid #3498db;
+    -webkit-animation: spin 2s linear infinite;
+    animation: spin 2s linear infinite;
+  }
+  
+  @-webkit-keyframes spin {
+    0% { -webkit-transform: rotate(0deg); }
+    100% { -webkit-transform: rotate(360deg); }
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+  
+  /* Add animation to "page content" */
+  .animate-bottom {
+    position: relative;
+    -webkit-animation-name: animatebottom;
+    -webkit-animation-duration: 1s;
+    animation-name: animatebottom;
+    animation-duration: 1s
+  }
+  
+  @-webkit-keyframes animatebottom {
+    from { bottom:-100px; opacity:0 } 
+    to { bottom:0px; opacity:1 }
+  }
+  
+  @keyframes animatebottom { 
+    from{ bottom:-100px; opacity:0 } 
+    to{ bottom:0; opacity:1 }
+  }
+  
